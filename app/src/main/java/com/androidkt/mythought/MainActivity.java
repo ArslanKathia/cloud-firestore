@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         FirebaseFirestore.setLoggingEnabled(true);
         firebaseFirestore = FirebaseFirestore.getInstance();
 
-        docRef = FirebaseFirestore.getInstance().document("thought/lifeThought");
+        docRef = firebaseFirestore.document("thought/lifeThought");
 
         query = docRef.collection(PUBLIC_THOUGHT).orderBy("timestamp", Query.Direction.DESCENDING)
                 .limit(LIMIT);
