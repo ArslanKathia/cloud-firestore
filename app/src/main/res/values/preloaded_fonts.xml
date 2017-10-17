@@ -3,7 +3,9 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/cedarville_cursive</item>
         <item>@font/chonburi</item>
+        <item>@font/farsan</item>
         <item>@font/faster_one</item>
+        <item>@font/federant</item>
         <item>@font/kaushan_script</item>
     </array>
 </resources>

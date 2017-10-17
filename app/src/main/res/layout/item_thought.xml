@@ -1,35 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:minHeight="48dp">
+    android:orientation="vertical">
 
+    <RelativeLayout
+        android:id="@+id/view_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_row_background">
 
-    <TextView
-        android:id="@+id/thought"
-        android:layout_width="0dp"
+        <ImageView
+            android:id="@+id/delete_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_delete_sweep_white_24dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/view_foreground"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/chonburi"
-        android:gravity="center"
-        android:text="My Public tho  adjan jkjad"
-        android:textSize="18sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="@android:color/white"
+        android:padding="10dp">
 
-    <TextView
-        android:id="@+id/publishBy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/kaushan_script"
-        android:text="by Ramesh Siippyy"
-        android:textColor="@color/colorPrimary"
-        android:textSize="12sp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/thought"
-        tools:layout_editor_absoluteX="324dp"
-        tools:layout_editor_absoluteY="41dp" />
+        <TextView
+            android:id="@+id/thought"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="-2dp"
+            android:text="sfsdgsagvsadgvasdgsadagsegwegwegfsf"
+            android:textSize="16sp" />
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:id="@+id/publishBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/thought"
+            android:paddingTop="-2dp"
+            android:text="androidkt"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+</FrameLayout>
